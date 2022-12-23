@@ -69,7 +69,7 @@ function createDuck() {
 
 function start() {
   bullet = level * 3;
-  speed = level * 1.2;
+  speed = speed * 1.2;
   let i = 0;
   while (i < bullet) {
     createDuck();
