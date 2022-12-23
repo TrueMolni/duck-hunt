@@ -28,7 +28,7 @@ btn3.onclick = function () {
   audioGun.play();
 };
 */
-let speed = 20;
+let speed = 10;
 let scores = 0;
 const duck = document.querySelector(".duck");
 const gameArea = document.querySelector(".game-area");
