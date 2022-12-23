@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Pragmatica";
+  src: url(assets/fonts/Pragmatica-Light.ttf);
+}
+
+/*Main styles*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Pragmatica";
+}
+.main-game-area {
+  position: relative;
+  height: 100%;
+}
+
+/*Bg*/
+.bg-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #64b0ff;
+}
+.grass-img {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.three-img {
+  position: absolute;
+  left: 13%;
+  bottom: 17%;
+  width: 21%;
+  height: 42%;
+  z-index: 1;
+}
+
+/*Content container*/
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.game-info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bullets-container {
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-top: 18px;
+}
+.bullet {
+  height: 31px;
+  width: 24px;
+  background: url(assets/images/hud/bullet/0.png) no-repeat center/100%;
+  background-size: cover;
+}
+.scores-container {
+  box-sizing: border-box;
+  padding-top: 18px;
+  padding-right: 25px;
+}
+.scores {
+  filter: blur(1px);
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+/*Game container*/
+.game-container {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+}
+.game-area {
+  width: 100%;
+  flex-grow: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+/*Dog styles*/
+.dog-moving-area {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+}
+.dog-single {
+  position: absolute;
+  top: -190px;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  background: url(assets/images/dog/single/0.png) center center no-repeat;
+  background-size: cover;
+}
+
+/*Ducks styles*/
+.duck {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+.black-duck-left {
+  background: url(assets/images/duck/black/left/0.png) center center no-repeat;
+  background-size: cover;
+}
+
+.red-duck-left {
+  background: url(assets/images/duck/red/left/0.png) center center no-repeat;
+  background-size: cover;
+}
+
+/*Message container*/
+.message-bar {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.info-msg {
+  font-size: 4em;
+  letter-spacing: 5px;
+  filter: blur(1px);
+  margin-bottom: 40px;
+}
+.info-suggestion {
+  font-size: 2em;
+  letter-spacing: 1px;
+  filter: blur(1px);
+}
+
+/*Control container*/
+.control-bar {
+  width: 100%;
+  height: 9%;
+  display: flex;
+  justify-content: space-between;
+}
+.ducks-cnt-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-bottom: 9px;
+}
+.died-ducks-cnt-container {
+  display: flex;
+}
+.died-duck-icon {
+  height: 41px;
+  width: 38px;
+  background: url(assets/images/hud/score-dead/0.png) no-repeat center/100%;
+  background-size: cover;
+}
+.left-ducks-cnt-container {
+  display: flex;
+}
+.left-duck-icon {
+  height: 41px;
+  width: 38px;
+  background: url(assets/images/hud/score-live/0.png) no-repeat center/100%;
+  background-size: cover;
+}
+.controls-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 9px;
+  padding-right: 25px;
+}
+.waves-info-container {
+  width: 100%;
+  text-align: right;
+}
+.waves-info {
+  filter: blur(1px);
+  letter-spacing: 1px;
+  display: block;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0.8;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+.controls-btns-container button {
+  filter: blur(1px);
+  letter-spacing: 1px;
+  margin-left: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #ffffff;
+  background-color: transparent;
+  border: unset;
+  opacity: 0.8;
+}
+
+@media screen and (max-height: 962px) {
+  .died-duck-icon,
+  .left-duck-icon {
+    height: 32px;
+  }
+  .waves-info {
+    margin-bottom: 0px;
+  }
+}

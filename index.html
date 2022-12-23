@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DuckHunt</title>
+  </head>
+  <body>
+    <audio src="assets/sounds/gunSound.mp3" id="audioGun"></audio>
+    <main class="main-game-area">
+      <div class="bg-container">
+        <img
+          src="assets/images/scene/back/0.png"
+          alt="grass-img"
+          class="grass-img"
+        />
+        <img
+          src="assets/images/scene/tree/0.png"
+          alt="three-img"
+          class="three-img"
+        />
+      </div>
+
+      <div class="content-container">
+        <div class="game-info-bar">
+          <div class="bullets-container"></div>
+
+          <div class="scores-container">
+            <span class="scores">0</span>
+          </div>
+        </div>
+
+        <div class="game-container">
+          <div class="game-area"></div>
+          <div class="dog-moving-area">
+            <!-- <div class="dog-single"></div> -->
+          </div>
+        </div>
+
+        <div class="message-bar" style="display: none">
+          <h2 class="info-msg">You Lose!</h2>
+          <h3 class="info-suggestion">Yikes. Play Again?</h3>
+        </div>
+
+        <div class="control-bar">
+          <div class="ducks-cnt-container">
+            <div class="died-ducks-cnt-container"></div>
+
+            <div class="left-ducks-cnt-container"></div>
+          </div>
+
+          <div class="controls-content-container">
+            <div class="waves-info-container">
+              <span class="waves-info"> wave 2 of 3 </span>
+            </div>
+
+            <div class="controls-btns-container">
+              <button id="pause_btn">pause (p)</button>
+              <button id="mute_btn">mute (m)</button>
+              <button id="fullscreen_btn">fullscreen (f)</button>
+              <button id="level_creator">level creator (c)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
